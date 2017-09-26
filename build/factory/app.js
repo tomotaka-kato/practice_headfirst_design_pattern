@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const NYPizzaStore_1 = require("./pizzaStores/NYPizzaStore");
+const ChicagoPizzaStore_1 = require("./pizzaStores/ChicagoPizzaStore");
+const nyStore = new NYPizzaStore_1.default();
+const chicagoStore = new ChicagoPizzaStore_1.default();
+let pizza = nyStore.orderPizza(nyStore.menus.CHEEZE);
+console.log(`イーサンの注文は${pizza.getName()}\n`);
+pizza = chicagoStore.orderPizza(chicagoStore.menus.CHEEZE);
+console.log(`ジョエルの注文は${pizza.getName()}`);
